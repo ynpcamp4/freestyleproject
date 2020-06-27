@@ -53,3 +53,10 @@ def get_word():
         print("Congrats, you guessed the word! You win!")
     else:
         print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!")
+
+        def main():
+    word = get_word()
+    play(word)
+    while input("Play Again? (Y/N) ").upper() == "Y":
+        word = get_word()
+        play(word)
