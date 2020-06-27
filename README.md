@@ -1,22 +1,36 @@
 # freestyleproject instructions
 
-# INSTALLING AND ACTIVATING VIRTUAL ENVIRONMENT
-make sure you are running a v3 of Python by typing in 'python --version'
+# INSTALLING AND ACTIVATING A VIRTUAL ENVIRONMENT
+First, let's make sure you are running an up-to-date version of Python by entering 
 
-enter 'python m venv env'
-activate by entering 'source env/bin/activate'
+'python --version' into the CLI. I'm running 3.7.6 but I believe anythin 3.6+ is ok.
 
-you can confirm you're in the virtual environment by checking the location of your Python interpreter by
-enter 'which python'
+--
 
-if you need leave the virtual environment
-enter 'deactivate'
+Next, enter
+
+'python m venv env' into the CLI and activate your virtual environment by entering 
+
+'source env/bin/activate' into the CLI.
+
+--
+
+You can confirm that you're in the virtual environment by checking the location of your Python interpreter by
+entering 
+
+'which python' into the CLI.
+
+---
+
+If you need leave the virtual environment enter
+
+'deactivate' into your CLI.
 
 # CREATING FILES
-create a hangman.py file
-create a words.py file
+Create a hangman.py file
+Create a words.py file
 
-# the first thing you're going to have to do is setup and get the word function
+# The first thing you need to do is setup and get the word function
 
 <!-- import random
 from words import word_list
@@ -25,7 +39,7 @@ def get_word():
     word = random.choice(word_list)
     return word.upper() -->
 
-# the next thing you need to do is define by the play function and the outputs
+# The next thing you need to do is define the play function and the outputs
 
 <!-- def play(word):
     word_completion = "_" * len(word)
@@ -76,7 +90,7 @@ def get_word():
     else:
         print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!") -->
 
-# the next thing you need to do is add a function to run the game
+# The next thing you need to do is add a function to run the game
 
 <!-- def main():
     word = get_word()
@@ -85,12 +99,12 @@ def get_word():
         word = get_word()
         play(word) -->
 
-# the next thing you need to do is add a function to run the game on the CIL
+# The next thing you need to do is add a function to run the game on the CIL
 
 <!-- if __name__ == "__main__":
     main() -->
 
-# the next thing you need to do is add a function to display a hangman in stages
+# The next thing you need to do is add a function to display a hangman in stages
 
 <!-- def display_hangman(tries):
     stages = [  # final state: head, torso, both arms, and both legs
@@ -166,6 +180,17 @@ def get_word():
     ]
     return stages[tries] -->
 
-# the next thing you need to do is add a word list to support your game
+# The next thing you need to do is add a word list to support your game
 
-you are now and can run your game
+The format is as follow
+
+<!-- word_list = [
+    'wares',
+    'soup', 
+    'enter word',
+    ....
+    ....
+    ....
+    'enter word']-->
+
+# You are now done and can run your game in the CLI
